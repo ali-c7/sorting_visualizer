@@ -176,7 +176,7 @@ col3, col4, col5 = st.columns(3)
 with col3:
     algorithm = st.selectbox("Sort using", ("Select", "Bucket Sort", "Insertion Sort", "Selection Sort", "Merge Sort"))
 with col4:
-    order = st.selectbox("Order of sorting", ("Select", "Ascending", "Descending"))
+    order = st.selectbox("Order of sorting", ("Select", "Ascending"))
 with col5:
     st.text("Ready?")
     start = st.button("Sort")
@@ -186,15 +186,15 @@ if start:
         st.header("The Insertion Sort Algorithm")
         if order == "Ascending":
             insertion_sort(x, removed_duplicates, 1)
-        else:
-            insertion_sort(x, removed_duplicates, 0)
+        #else:
+        #    insertion_sort(x, removed_duplicates, 0)
 
     elif algorithm == "Selection Sort":
         st.header("The Selection Sort Algorithm")
         if order == "Ascending":
             selection_sort(x, removed_duplicates, 1)
-        else:
-            selection_sort(x, removed_duplicates, 0)
+        #else:
+        #    selection_sort(x, removed_duplicates, 0)
     elif algorithm == "Bucket Sort":
         st.header("The Bucket Sort Algorithm")
         bucket_sort(lst)
